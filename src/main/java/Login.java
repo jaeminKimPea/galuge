@@ -16,14 +16,14 @@ class Login extends JPanel {
 	
 	String userMode = "일반";
 	Rpg lp;
-	signup sp;
+	Signup sp;
 	String admin = "admin";
 	JButton loginButton = new JButton(new ImageIcon("img/btLogin_hud.png"));
 	JButton signupButton = new JButton(new ImageIcon("img/btSighnup_hud.png"));
 	JButton EscButton = new JButton(new ImageIcon("img/btESC_hud.png"));
 	JButton RankButton = new JButton(new ImageIcon("img/btRank_hud.png"));
 	
-	public Login(Rpg lp, signup sp) {
+	public Login(Rpg lp, Signup sp) {
 		this.lp = lp;
 		this.sp = sp;
 		GPanel GPanel = new GPanel();

@@ -60,8 +60,8 @@ public class Rpg extends JFrame implements KeyListener{
 	JButton EscButton;
 	String id = "";
 	Login lp;
-	signup sp;
-	Ranking Rkp;
+	Signup sp;
+	Ranking rkp;
 	private Audio backgroundMusic;
 	//Thread MagicianStart = new Thread(this);
 	public Magician Magician;
@@ -70,10 +70,10 @@ public class Rpg extends JFrame implements KeyListener{
 		setframe();
 	}
 	public void setframe() {
-		Rkp = new Ranking(this);
+		rkp = new Ranking(this);
 		lp = new Login(this,sp);
-		sp = new signup(this);
-		Magician = new Magician(this, Rkp);
+		sp = new Signup(this);
+		Magician = new Magician(this, rkp);
 		EscButton = new JButton("ESC");
 		EscButton.setBounds(1100, 10, 82, 39);
 		// 버튼 투명처리
@@ -84,7 +84,7 @@ public class Rpg extends JFrame implements KeyListener{
 		cardPanel.add(lp, "Login");
 		cardPanel.add(sp, "Register");
 		cardPanel.add(gp, "game");
-		cardPanel.add(Rkp, "Rank");
+		cardPanel.add(rkp, "Rank");
 		add(cardPanel);
 		setUndecorated(true); // 테두리없는 창
 		setSize( Main.SCREEN_WIDTH, Main.SCREEN_HEIGTH);
